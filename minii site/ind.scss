@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.deed{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(53, 51, 51);
+    display: flex;
+    position: sticky;
+    
+    .eh{
+        width: 30%;
+        height: 100%;
+        // background-color: black;
+     padding-left: 20px;      
+     padding-top: 10px;
+    
+        h1{
+            font-size: 38px;
+            font-style: italic ;
+            margin: auto;
+            animation: isaak 4s infinite;
+        }
+    }
+    @keyframes isaak {
+        from{
+            transform: scale(0.1);
+        }
+        to{
+            transform: scaleX(0.9);
+        }
+        
+    }
+    .hajuu{
+        width: 70%;
+        height: 100%;
+        background-color: rgb(47, 46, 46);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      .neg{
+          width: 20%;
+          height: 100%;
+          display: flex;
+        justify-content: center;
+        align-items: center;
+           }
+        i{
+          
+           font-size: 20px;
+        }
+        .neg:hover{
+            background-color: aqua;
+            color: black;
+        }
+    }
+}
+.biig{
+    width: 100%;
+    height: 600px;
+    // background-color: aqua;
+    background-color: rgba(10, 10, 10, 0.671);
+    display: flex;
+    .one{
+        width: 40%;
+        height: 80%;
+        // background-color: bisque;
+        margin-top: 80px;
+        img{
+            width:100%;
+        height: 100%;  
+    object-fit: cover;   
+    border-radius: 50%;   
+}
+    }
+    .two{
+        width: 60%;
+        height: 100%;
+        padding-left: 20px;
+        // background-color: brown;
+        p{
+            
+            font-size: 28px;
+            font-style: oblique;
+            animation: kaka 2s ;
+        }
+    }
+}
+@keyframes kaka {
+
+    from{
+        transform: scaleY(0.1);
+    }
+    to{
+        transform: rotate(2);
+    }
+}
+main{
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background-color: rgb(95, 94, 94);
+}
+.big{
+    margin-top: 30px;
+    width: 80%;
+    height: 500px;
+    overflow: hidden;
+   
+}
+.big .container{
+    width: 400%;
+    height: 500px;
+    display: flex;
+    position: relative;
+    animation: swiper 15s infinite ; 
+}
+.big .container label{
+    width: 100%;
+    height: 100%;
+}
+.big .container label .child{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    border-radius: 20%;
+    
+    p{
+        padding-left: 20px;
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(18, 19, 19);
+        
+    }
+    
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 100%;
+    }
+    .text{
+        color: aqua;
+        animation: text 4s infinite;
+    }
+   
+}
+@keyframes text {
+    from{
+        transform: scaleY(2s);
+    }
+    to{
+        transform: rotate(3);
+    }
+    
+}
+
+   
+
+@keyframes swiper {
+    0%{
+        left: 100%;
+
+    }
+    20%{
+        left: -100%;
+    }
+    40%{
+        left: -200%;
+    }
+    60%{
+        left: -300%;
+    }
+    80%{
+        left: -300%;
+    }
+    100%{
+        left: 0%;
+    } 
+}
+#page-one:checked ~ * .container{
+    left: 0;
+}
+#page-two:checked ~ * .container{
+    left: -100%;
+}
+#page-three:checked ~ * .container{
+    left: -200%;
+}
+#page-four:checked ~ * .container{
+    left: -300%;
+}
